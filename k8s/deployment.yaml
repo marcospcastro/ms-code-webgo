@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: code-golang
+spec:
+  selector:
+    matchLabels:
+      app: code-golang
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: code-golang
+    spec:
+      containers:
+        - name: golang
+          image: marcospcastro/web_go:latest
+          ports:
+            - containerPort: 8000
