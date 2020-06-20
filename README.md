@@ -1,0 +1,1 @@
+docker pull marcospcastro/web_go:latest
